@@ -1,0 +1,90 @@
+<section class="form">
+  <div class="container">
+    <h2 class="form__title">Оформление <span>Заказа</span></h2>
+    <p class="form__txt">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+    <ul class="form-steps">
+      <li class="form-steps__item">
+        <div class="form-steps__item-icn">
+          <img src="img/svg/form-icn-1.svg" alt="">          
+        </div>
+        <span>Lorem ipsum dolor sit amet</span>
+      </li>
+      <li class="form-steps__item">
+        <div class="form-steps__item-icn">
+          <img src="img/svg/form-icn-2.svg" alt="">          
+        </div>
+        <span>Сonsecteturadipiscing elit</span>
+      </li>
+      <li class="form-steps__item">
+        <div class="form-steps__item-icn">
+          <img src="img/svg/form-icn-3.svg" alt="">          
+        </div>
+        <span>Sed do eiusmod tempor</span>
+      </li>
+      <li class="form-steps__item">
+        <div class="form-steps__item-icn">
+          <img src="img/svg/form-icn-4.svg" alt="">          
+        </div>
+        <span>Esse cillum dolore eu fugiat</span>
+      </li>
+      <li class="form-steps__item">
+        <div class="form-steps__item-icn">
+          <img src="img/svg/form-icn-5.svg" alt="">          
+        </div>
+        <span>Excepteur sint occaecat cupidatat non proident</span>
+      </li>
+    </ul>
+    
+    <form enctype="multipart/form-data" action="#" method="post" class="order-form">
+      <div class="order-form__grid">
+        <div class="order-form__label">
+          <div class="styled-select js-styled-select">
+            <select name="categorys" hidden>
+              <option disabled value="---">Выберите тип системы</option>
+              <option value="Sed ut perspiciatis">Sed ut perspiciatis</option>
+              <option value="Nemo enim ipsam">Nemo enim ipsam</option>
+              <option value="Et harum quidem">Et harum quidem</option>
+              <option value="Temporibus autem">Temporibus autem</option>
+              <option value="Itaque earum rerum">Itaque earum rerum</option>
+              <option value="Sed ut perspiciatis">Sed ut perspiciatis</option>
+              <option value="Nemo enim ipsam">Nemo enim ipsam</option>
+              <option value="Et harum quidem">Et harum quidem</option>
+              <option value="Temporibus autem">Temporibus autem</option>
+              <option value="Itaque earum rerum">Itaque earum rerum</option>
+            </select>
+          </div>
+        </div>
+        <label class="order-form__label">
+          <input type="email" name="email" class="input" placeholder="Ваш e-mail">
+        </label>
+        <label class="order-form__label">
+          <input type="text" name="name" class="input" placeholder="Ваше имя">
+        </label>
+        <div class="order-form__label order-form__label--2">
+          <div class="range" id="js-range">
+            <div class="range__row">              
+              <span>Sed ut perspiciatis, unde omnis iste natus</span>
+              <span>
+                <span class="js-range-val">0</span>&nbsp;%
+              </span>
+            </div>
+            <input class="range__input" type="range" min="0" max="100" step="1" value="0">
+	      </div>
+        </div>
+        <div class="order-form__label">
+          <div class="file js-file">            
+            <label class="btn btn--secondary file__txt">
+              <input type="file" hidden name="files" class="file__input">
+              <img src="img/svg/page.svg" alt="">
+              <span class="file__name js-file-name">Прикрепить файл</span>              
+            </label>   
+            <button class="btn file__del js-file-del" type="button" title="Удалить"></button>                     
+          </div>
+        </div>
+      </div>
+      <div class="order-form__bar">
+        <button class="btn btn--primery" type="submit">Отправить</button>
+      </div>
+    </form>
+  </div>
+</section>

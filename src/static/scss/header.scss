@@ -1,0 +1,112 @@
+.header{
+  position: fixed;
+  z-index: 110;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(16, 16, 29, .9);
+  &__wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+  }
+  &__logo{
+    display: block;
+    width: 255px;
+  }
+  &-nav{
+    ul{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      li{
+        margin-left: 60px;
+        a{
+          font-size: 13px;
+          line-height: 16px;
+          text-transform: uppercase;
+          color: #fff;
+          white-space: nowrap;
+          &:hover,
+          &.active{color: #43ABF0;}
+        }
+      }
+    }
+  }
+  @media only screen and (max-width : 1023px){
+    &-nav{
+      ul{
+        li{
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width : 767px){
+    &__wrap{height: 60px;}
+    &__logo{width: 220px;}
+    &-nav{
+      position: fixed;
+      top: 60px;
+      transform: translateY(calc(-100% - 60px));
+      transition: transform .5s;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 60px);
+      min-height: calc(100vh - 60px);
+      padding: 24px 16px;
+      background-color: rgba(16, 16, 29, .9);
+      ul{
+        display: block;
+        li{
+          margin-left: 0;
+          margin-bottom: 16px;
+          a{
+            font-size: 16px;
+            line-height: 20px;
+          }
+        }
+      }
+      &.open{
+        top: 60px;
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+
+.burger{
+  display: none;
+  @media only screen and (max-width : 767px){
+    display: block;
+    width: 44px;
+    height: 44px;
+    background-color: #3e9cdc;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 0 0 0 1px #fff;
+    span{
+      display: block;
+      width: 30px;
+      height: 2px;
+      border-radius: 1px;
+      background-color: #fff;
+      position: absolute;
+      left: 7px;
+      transition: transform .25s, top .25s .25s;
+      &:nth-child(1){top: 13px;}
+      &:nth-child(2){top: 21px;}
+      &:nth-child(3){top: 29px;}
+    }
+    &.open{
+      span{
+        transition: top .25s, transform .25s .25s;        
+        &:nth-child(1){top: 21px; transform: rotate(45deg);}
+        &:nth-child(3){top: 21px; transform: rotate(-45deg);}
+        &:nth-child(2){display: none;}
+      }
+    }
+  }  
+}

@@ -1,0 +1,22 @@
+//библиотеки и плагины
+@import "vendors.scss";
+
+//шрифты
+@import "fonts.scss";
+
+//переменный и миксины
+@import "_mix.scss";
+
+//базовые глобальные стили
+@import "basic.scss";
+@import "file.scss";
+@import "range.scss";
+@import "select.scss";
+
+//глобальные модули
+@import "header.scss";
+@import "footer.scss";
+
+//секции
+@import "hero.scss";
+@import "form.scss";

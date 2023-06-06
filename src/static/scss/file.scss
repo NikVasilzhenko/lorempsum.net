@@ -1,0 +1,44 @@
+.file{
+  position: relative;
+  &__txt{
+    width: 100%;
+    max-width: 100%;
+    img{flex-shrink: 0;}
+  }
+  &__name{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 200px;
+  }
+  &__del{
+    display: none;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    right: 20px;
+    margin-top: -10px;
+    &::before,
+    &::after{
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: red;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-top: -1px;
+    }
+    &::before{transform: rotate(45deg);}
+    &::after{transform: rotate(-45deg);}
+  }
+  &.value{
+    .file__txt{
+      justify-content: flex-start;
+      padding-right: 60px;
+    }
+    .file__del{display: block;}
+  }
+}
